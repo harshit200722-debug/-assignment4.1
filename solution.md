@@ -1,15 +1,73 @@
-Part 1: Explanatory Paragraph
-When you type a URL into your web browser (the client), it triggers a request-response cycle by sending an HTTP (Hypertext Transfer Protocol) or securely encrypted HTTPS request across the internet to the server where the website lives. For a static website, the server simply responds by sending pre-written HTML, CSS, and JavaScript files directly back to the client. However, if it is a dynamic website, the server first communicates with a database to retrieve specific, up-to-date data (like user profiles or live feeds) and builds the webpage on the fly before sending the final code back. Once the browser receives this response, it translates the code into the visual website that opens on your screen.
+The HTML Code
+Copy the code below and save it as registration.html.
 
-Part 2: How to get your Screenshot
-To fulfill the second part of your assignment, you'll need to take a screenshot of the Network tab on your own computer. Here is exactly how to do it:
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+<body>
 
-Open Google Chrome and go to any website (e.g., wikipedia.org).
+    <h1>Student Registration</h1>
+    <p>Please fill out the form below to register.</p>
 
-Right-click anywhere on the page and select Inspect (or press Ctrl + Shift + I on Windows / Cmd + Option + I on Mac).
+    <hr>
 
-In the panel that opens, click on the Network tab at the top. (If you don't see it, click the >> arrows to reveal hidden tabs).
+    <form action="#" method="post">
+        
+        <!-- Full Name Field -->
+        <div>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+        </div>
+        <br>
 
-With the Network tab open, refresh the page (F5 or Ctrl + R). You will see a waterfall of files (requests) loading in the panel.
+        <!-- Email Field -->
+        <div>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <br>
 
-Take a screenshot of this entire window showing the list of network requests and save it to submit with your paragraph.
+        <!-- Password Field -->
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <br>
+
+        <!-- Phone Number Field -->
+        <div>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <br>
+
+        <!-- Age Field -->
+        <div>
+            <label for="age">Age:</label>
+            <!-- Using min and max constraints for better data validation -->
+            <input type="number" id="age" name="age" min="1" max="120" required>
+        </div>
+        <br>
+
+        <!-- Submit Button -->
+        <div>
+            <button type="submit">Register</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
+How to Prepare Your Submission:
+Test the Form: Double-click your registration.html file to open it in your web browser.
+
+Verify HTML5 Validation: Try clicking the Register button without filling anything out. The browser should automatically show a warning (like "Please fill out this field") because of the required attribute. Try typing plain text into the Email or Age fields and submitting again—the browser will catch the errors because of the type="email" and type="number" attributes.
+
+Take a Screenshot: Fill out the form with some dummy data and take a clear screenshot of the entire form.
+
+Submit: Upload your registration.html file and your screenshot as instructed by your course.
